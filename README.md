@@ -39,6 +39,7 @@ Future Ben, you are welcome!
 * [I want to squash several commits into one commit without using `rebase`.](#i-want-to-squash-several-commits-into-one-commit-without-using-rebase)
 * [I want to temporarily set-aside my feature work.](#i-want-to-temporarily-set-aside-my-feature-work)
 * [I want to keep my changes during conflict resolution.](#i-want-to-keep-my-changes-during-conflict-resolution)
+* [I want to update the upstream of a repository.](#i-want-to-update-the-upstream-of-a-repository)
 
 ## Use Cases
 
@@ -686,6 +687,18 @@ git checkout --theirs code.js
 git add .
 git rebase --continue
 ```
+
+### I want to update the up-stream of a repository
+
+```
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
+List your existing remotes in order to get the name of the remote you want to change.
+``
+$ git remote -v
+> origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+> origin  git@github.com:USERNAME/REPOSITORY.git (push)
+``
 
 > **ASIDE**: Using `--theirs` in a `rebase` can seem confusing because you are already in "your" feature branch. As such, it would seem logical that your version of the code would be targeted with `--ours`, not `--theirs`. However, a `rebase` operates _kind of like_ a series of `cherry-pick` operations. You can think of a `rebase` as doing the following:
 > 
