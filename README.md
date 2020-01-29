@@ -707,3 +707,13 @@ $ git remote -v
 > * Replace your feature branch with this temporary branch
 > 
 > With this mental model, "your" version - targeted using `--theirs` - is the version being cherry-picked into the "current context" (the temporary branch).
+
+
+
+## i want to reset /revert to a given commit
+
+`git reset -- hard commit hash`
+
+`git push push -f`
+
+After resetting you have to make a force pull to reset the head to that particular commti
