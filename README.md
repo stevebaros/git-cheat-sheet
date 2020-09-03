@@ -40,6 +40,8 @@ Future Ben, you are welcome!
 * [I want to temporarily set-aside my feature work.](#i-want-to-temporarily-set-aside-my-feature-work)
 * [I want to keep my changes during conflict resolution.](#i-want-to-keep-my-changes-during-conflict-resolution)
 * [I want to update the upstream of a repository.](#i-want-to-update-the-upstream-of-a-repository)
+* [I want to clone only one branch of a repository.](#i-want-to-clone-only-one-branch)
+* [I want to clone only the latest commit of one branch of a repository ](#i-want-to-clone-only-one-branch-and-the-latest-commit-only)
 
 ## Use Cases
 
@@ -716,4 +718,12 @@ $ git remote -v
 
 `git push push -f`
 
-After resetting you have to make a force pull to reset the head to that particular commti
+After resetting you have to make a force pull to reset the head to that particular commit
+
+##i-want-to-clone-only-one-branch
+
+git clone -b master --single-branch  https://gitlab.com/repo.git eposta
+
+##i-want-to-clone-only-one-branch-and-the-latest-commit-only
+
+git clone -b master --single-branch --depth 1 https://gitlab.com/repo.git eposta
